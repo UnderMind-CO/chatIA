@@ -16,3 +16,22 @@ export interface ImageIA
     uint8ArrayData?: Uint8Array;
 
 }
+
+export interface ConversationMessage
+{
+    role: 'User' | 'Guest';
+    content: String;
+}
+
+export interface GenerateStoryResquest{
+
+    userMessage: String;
+    conversationHistory: ConversationMessage[];
+    isStart: Boolean;
+}
+
+export interface GenerateStoryResponse{
+
+    story: String;
+    image: ImageIA;
+}
